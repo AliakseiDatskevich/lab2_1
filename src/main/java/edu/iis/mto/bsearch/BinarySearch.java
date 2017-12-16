@@ -1,17 +1,17 @@
 /**
- * 
+ *
  */
 package edu.iis.mto.bsearch;
 
 /**
  * Utility Class dla wyszukiwania binarnego
- * 
+ *
  */
 public class BinarySearch {
 
     /**
      * Metoda realizujaca wyszukiwanie binarne
-     * 
+     *
      * @param key
      *            - szukany obiekt
      * @param seq
@@ -19,7 +19,7 @@ public class BinarySearch {
      * @return obiekt rezultatu o polach: - found (true jezeli znaleziony) - position (jezeli znaleziony - pozycja w
      *         sekwencji, jezeli nie znaleziony -1)
      */
-    public static SearchResult search(int key, int[] seq) {
+    public static SearchResult search(int key, int[] seq) throws IllegalArgumentException {
         int start = 0;
         int end = seq.length - 1;
         int center;
@@ -31,10 +31,11 @@ public class BinarySearch {
                 result.setPosition(center + 1);
                 break;
             } else {
-                if (seq[center] < key)
+                if (seq[center] < key) {
                     start = center + 1;
-                else
+                } else {
                     end = center - 1;
+                }
             }
 
         }

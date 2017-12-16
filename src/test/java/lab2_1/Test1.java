@@ -1,5 +1,6 @@
 package lab2_1;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -20,6 +21,7 @@ public class Test1 {
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
         assertTrue(searchRes.isFound());
+        assertEquals(6, searchRes.getPosition());
         System.out.println("=============\n");
     }
 
@@ -33,6 +35,7 @@ public class Test1 {
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
         assertFalse(searchRes.isFound());
+        assertEquals(-1, searchRes.getPosition());
         System.out.println("=============\n");
     }
 
@@ -46,6 +49,7 @@ public class Test1 {
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
         assertTrue(searchRes.isFound());
+        assertEquals(1, searchRes.getPosition());
         System.out.println("=============\n");
     }
 
@@ -53,12 +57,13 @@ public class Test1 {
     public void lastKeyPosition() {
         System.out.println("=============");
         System.out.println("Last key position test:");
-        int key = 8;
-        int seq[] = {1, 2, 3, 4, 5, 6, 7, 8};
+        int key = 9;
+        int seq[] = {2, 3, 4, 5, 6, 7, 8, 9};
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
         assertTrue(searchRes.isFound());
+        assertEquals(8, searchRes.getPosition());
         System.out.println("=============\n");
     }
 
@@ -66,12 +71,13 @@ public class Test1 {
     public void midleKeyPosition() {
         System.out.println("=============");
         System.out.println("Midle key position test:");
-        int key = 7;
-        int seq[] = {1, 2, 3, 4, 5, 6, 7};
+        int key = 5;
+        int seq[] = {2, 3, 4, 5, 6, 7, 8};
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
         assertTrue(searchRes.isFound());
+        assertEquals(4, searchRes.getPosition());
         System.out.println("=============\n");
     }
 
@@ -85,6 +91,7 @@ public class Test1 {
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
         assertFalse(searchRes.isFound());
+        assertEquals(-1, searchRes.getPosition());
         System.out.println("=============\n");
     }
 }
