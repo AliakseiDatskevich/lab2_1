@@ -1,5 +1,8 @@
 package lab2_1;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 import edu.iis.mto.bsearch.BinarySearch;
@@ -16,6 +19,7 @@ public class Test1 {
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
+        assertTrue(searchRes.isFound());
         System.out.println("=============\n");
     }
 
@@ -28,6 +32,7 @@ public class Test1 {
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
+        assertFalse(searchRes.isFound());
         System.out.println("=============\n");
     }
 
@@ -40,6 +45,7 @@ public class Test1 {
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
+        assertTrue(searchRes.isFound());
         System.out.println("=============\n");
     }
 
@@ -52,6 +58,7 @@ public class Test1 {
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
+        assertTrue(searchRes.isFound());
         System.out.println("=============\n");
     }
 
@@ -64,6 +71,7 @@ public class Test1 {
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
+        assertTrue(searchRes.isFound());
         System.out.println("=============\n");
     }
 
@@ -76,6 +84,7 @@ public class Test1 {
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition());
+        assertFalse(searchRes.isFound());
         System.out.println("=============\n");
     }
 }
