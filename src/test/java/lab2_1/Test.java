@@ -80,4 +80,29 @@ public class Test {
         assertFalse(searchRes.isFound());
         assertEquals(-1, searchRes.getPosition());
     }
+
+    @org.junit.Test
+    public void chaoticSequence() {
+        System.out.println("Choatic key position test:");
+        int key = 45;
+        int seq[] = {36, 1, 45, 46, 0, 312, 34};
+        new BinarySearch();
+        SearchResult searchRes = BinarySearch.search(key, seq);
+        System.out.println(searchRes.getPosition() + "\n");
+        assertTrue(searchRes.isFound());
+        assertEquals(3, searchRes.getPosition());
+    }
+
+    @org.junit.Test
+    public void decreasingSequence() {
+        System.out.println("Decreasing test:");
+        int key = 4;
+        int seq[] = {21, 19, 13, 9, 8, 6, 4, 1};
+        new BinarySearch();
+        SearchResult searchRes = BinarySearch.search(key, seq);
+        System.out.println(searchRes.getPosition() + "\n");
+        assertTrue(searchRes.isFound());
+        assertEquals(7, searchRes.getPosition());
+    }
+
 }
