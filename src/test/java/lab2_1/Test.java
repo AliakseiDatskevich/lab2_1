@@ -60,8 +60,32 @@ public class Test {
     @org.junit.Test
     public void midleKeyPosition() {
         System.out.println("Midle key position test:");
-        int key = 5;
-        int seq[] = {2, 3, 4, 5, 6, 7, 8};
+        int key = 3;
+        int seq[] = {1, 2, 3, 4, 5};
+        new BinarySearch();
+        SearchResult searchRes = BinarySearch.search(key, seq);
+        System.out.println(searchRes.getPosition() + "\n");
+        assertTrue(searchRes.isFound());
+        assertEquals(3, searchRes.getPosition());
+    }
+    
+    @org.junit.Test
+    public void midleKeyLeftPosition() {
+        System.out.println("Midle left key position test:");
+        int key = 2;
+        int seq[] = {1, 2, 3, 4, 5};
+        new BinarySearch();
+        SearchResult searchRes = BinarySearch.search(key, seq);
+        System.out.println(searchRes.getPosition() + "\n");
+        assertTrue(searchRes.isFound());
+        assertEquals(2, searchRes.getPosition());
+    }
+    
+    @org.junit.Test
+    public void midleKeyRightPosition() {
+        System.out.println("Midle right key position test:");
+        int key = 4;
+        int seq[] = {1, 2, 3, 4, 5};
         new BinarySearch();
         SearchResult searchRes = BinarySearch.search(key, seq);
         System.out.println(searchRes.getPosition() + "\n");
